@@ -7,6 +7,32 @@
 </head>
 <body>
     <h1>Welcome to the Blog</h1>
-    <a href="{% url 'create_and_filter_posts' %}">View Posts</a>
+
+    <!-- Category Filter Form -->
+    <form method="GET">
+        <select name="category">
+            <option value="">All Categories</option>
+            <option value="General">General</option>
+            <option value="Tech">Tech</option>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
+    <!-- Display Blog Posts -->
+    <h2>Blog Posts</h2>
+    <ul>
+        {% if posts %}
+            {% for post in posts %}
+            <li>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+                <p><strong>Category:</strong> {{ post.category }}</p>
+                <p><small>{{ post.created_at }}</small></p>
+            </li>
+            {% endfor %}
+        {% else %}
+            <li>No blog posts available.</li>
+        {% endif %}
+    </ul>
 </body>
 </html>
