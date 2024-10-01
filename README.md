@@ -1,11 +1,13 @@
 # Django Blog Application
 
-This project is a simple blog application built using Django. It allows you to create and filter blog posts by category, and manage them through the Django admin interface.
+This is a simple blog application built with Django. It allows users to view and filter blog posts by category, with post management available via the Django admin panel.
 
 ## Features
-- Create blog posts with a title, content, and category.
+- Home page displaying a list of blog posts.
 - Filter blog posts by category.
-- Manage blog posts through the Django admin interface.
+- Display up to 10 blog posts per page.
+- Manage blog posts through the Django admin panel (add, edit, delete).
+- Create, view, and filter blog posts.
 
 ## Prerequisites
 Before starting, make sure you have the following installed:
@@ -19,5 +21,16 @@ Before starting, make sure you have the following installed:
     http://127.0.0.1:8000/admin/
     ```
 
+### Usage
+#### Adding Posts
+You can add posts using the Django admin panel. Once logged in as the superuser, you can:
 
+1. Add new posts with a title, content, and category.
+2. Edit or delete existing posts.
+####  Filtering Posts
+On the home page, users can filter blog posts by category using the dropdown filter.
 
+### Future Enhancements
+- Implement pagination for blog posts.
+- Add user authentication to allow users to create and comment on posts.
+- Enhance post filtering by adding more categories and search functionality.
